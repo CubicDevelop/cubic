@@ -10,8 +10,8 @@ bot.catergories = fs.readdirSync('./commands');
 bot.prefixes = new Discord.Collection();
 bot.dogs = new Discord.Collection();
 bot.cats = new Discord.Collection();
-const slurs = require('./slurs.js');
-const swears = require('./swear.js');
+const slurs = require('./filters/slurs.js');
+const swears = require('./filters/swear.js');
 const ready = require('./ready.js');
 const servers = bot.guilds.cache.size;
 
