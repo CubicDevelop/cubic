@@ -1,0 +1,35 @@
+{
+  "name": "CubeBot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "ascii-table": "^0.0.9",
+    "beautify": "^0.0.8",
+    "cheerio": "^1.0.0-rc.3",
+    "common-tags": "^1.8.0",
+    "convert-units": "^2.3.4",
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "french-verbs": "^3.0.0",
+    "french-verbs-lefff": "^1.0.0",
+    "mongoose": "^5.11.1",
+    "node-cron": "^2.0.3",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LordOfTheCube1/cubebot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LordOfTheCube1/cubebot/issues"
+  },
+  "homepage": "https://github.com/LordOfTheCube1/cubebot#readme"
+}
