@@ -32,9 +32,9 @@ module.exports = {
                                                                 .setFooter("Contains keyword 'token'.")
                                                                 .setColor(0xFF0000));
         }
-        if(toEval.toLowerCase().includes('waifdjid')) {
+        if(toEval.toLowerCase().includes('process')) {
           return message.channel.send(new Discord.MessageEmbed().setDescription('I couldn\'t perform this command as it looks suspicious.')
-                                                                .setFooter("Reason hidden by developer")
+                                                                .setFooter("Contains keyword 'process'")
                                                                 .setColor(0xFF0000));
         }
         if(toEval.toLowerCase().includes('config')) {
