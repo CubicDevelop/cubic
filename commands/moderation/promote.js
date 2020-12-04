@@ -25,9 +25,9 @@ module.exports = {
     user = message.guild.member(user);
 
     if(!user) user = message.guild.members.cache.get(args[2]);
-    if(!user) user = message.guild.members.cache.find(r => r.tag.toLowerCase() === args[2].toLowerCase());
+    if(!user) user = message.guild.members.cache.find(r => r.user.tag.toLowerCase() == args[2].toLowerCase());
 
-    if(!user) user = message.guild.members.cache.find(u => u.displayName.toLowerCase() === args[2].toLowerCase());
+    if(!user) user = message.guild.members.cache.find(u => u.displayName.toLowerCase() == args[2].toLowerCase());
     if(!user)  return message.channel.send(`I couldn't find that user.`);
     if(user.roles.cache.get(role.id)) {
       user.roles.remove(role, `Command issued by ${message.author.tag}.`).catch(e => {
