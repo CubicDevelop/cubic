@@ -42,9 +42,9 @@ module.exports = {
     });
     user.send(`You have been given the **${role.name}** role in **${message.guild.name}**`).catch(e => {
       console.warn(e);
-      return message.channel.send(`I couldn't dm ${user.tag}.`);
+      return message.channel.send(`I couldn't dm ${user.user.tag}.`);
     });
-    message.channel.send(`**${user.tag}** has been given the role **${role.name}**`)
+    message.channel.send(`**${user.user.tag}** has been given the role **${role.name}**`)
     }
   }
 }
