@@ -8,7 +8,7 @@ module.exports = {
         const user = message.mentions.users.first();
         const embed = new Discord.MessageEmbed()
                     .setTitle("D R I P")
-                    .setImage(`https://vacefron.nl/api/drip?avatar=${user.displayAvatarUrl() ?? message.author.displayAvatarUrl()}`)
+                    .setImage(`https://vacefron.nl/api/drip?user=${user.displayAvatarUrl() ?? message.author.displayAvatarUrl()}`)
                     .setColor('RANDOM')
                     .setTimestamp();
                     message.channel.send(embed);
