@@ -204,10 +204,13 @@ bot.on('messageReactionAdd', async (reaction, user) => {
   if(!reaction.message.guild.id == "634078414332231681") return;
   const channel = reaction.message.guild.channels.cache.get("820147312055287828");
   if(!channel) return;
+  let thumbnail;
+  if(reaction.emoji.url) thumbnail = reaction.emoji.url;
+  else thumbnail = user.displayAvatarURL();
   const embed = new Discord.MessageEmbed()
   .setColor("RANDOM")
   .setFooter(user.id + ", " + reaction.message.id)
-  .setThumbnail(user.displayAvatarURL())
+  .setThumbnail(thumbnail)
   .setDescription(`Reaction of ${reaction.emoji} (${reaction.emoji.id}) from ${user.tag} (${user.id}) in ${reaction.message.channel} (${reaction.message.channel.id})`);
   channel.send(embed);
 })
