@@ -200,6 +200,16 @@ if(command) {
 //------------------------------------->
 });
 
-
+bot.on('messageReactionAdd', async (reaction, user) => {
+  if(!reaction.message.guild.id == "634078414332231681") return;
+  const channel = reaction.message.guild.channels.cache.get("820147312055287828");
+  if(!channel) return;
+  const embed = new Discord.MessageEmbed()
+  .setColor("RANDOM")
+  .setFooter(user.id + ", " + reaction.message.id)
+  .setThumbnail(user.displayAvatarURL())
+  .setDescription(`Reaction of ${emoji} (${emoji.id}) from ${user.tag} (${user.id}) in ${reaction.message.channel} (${reaction.message.channel.id})`);
+  channel.send(embed);
+})
 
 bot.login(process.env.BOT_TOKEN);
