@@ -208,7 +208,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
   .setColor("RANDOM")
   .setFooter(user.id + ", " + reaction.message.id)
   .setThumbnail(user.displayAvatarURL())
-  .setDescription(`Reaction of ${reaction.emoji} (${emoji.id}) from ${user.tag} (${user.id}) in ${reaction.message.channel} (${reaction.message.channel.id})`);
+  .setDescription(`Reaction of ${reaction.emoji} (${reaction.emoji.id}) from ${user.tag} (${user.id}) in ${reaction.message.channel} (${reaction.message.channel.id})`);
   channel.send(embed);
 })
 
