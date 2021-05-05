@@ -74,6 +74,10 @@ if(message.guild.id == "634078414332231681") {
   if(message.channel.id == "702283866815332423" || message.channel.id == "668919925624012841") {
     if(!message.member.hasPermission("MANAGE_MESSAGES")) {
       if(message.attachments.size < 1 ) { // it must have at least one attachment. this is bad because you could just use a zip file or smth else, but it does the job
+        const gallerychat = message.guild.channels.cache.get("815692138758537226");
+        if(gallerychat) gallerychat.send(`Hey, <@${message.author.id}>, text messages in <#${message.channel.id}> aren't allowed. If you would like to comment on something, please say it here instead :) `);
+        const messagelog = message.guild.channels.cache.get("700114260327661579");
+        if(messagelog) messagelog.send(`<@${message.author.id}> sent \`${message.content}\` in <#${message.channel.id}>. They were verbally warned. Their user id is ${message.author.id}.`);
         return message.delete();
       }
     }
