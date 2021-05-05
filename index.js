@@ -69,7 +69,16 @@ bot.on('message', async message => {
     return;
   }
 }
-
+//--------------------------------------------> LLC image checking
+if(message.guild.id == "634078414332231681") {
+  if(message.channel.id == "702283866815332423" || message.channel.id == "668919925624012841") {
+    if(!message.member.hasPermission("MANAGE_MESSAGES")) {
+      if(message.attachments.size < 1 ) { // it must have at least one attachment. this is bad because you could just use a zip file or smth else, but it does the job
+        return message.delete();
+      }
+    }
+  }
+}
 //--------------------------------------------> Word filter (by sysollie)
 
 /* const filtered = ['jsakdjsdhjisdhoaishdoashdoasidhosh', 'iahwhwodhsoidhoaihowh'];
