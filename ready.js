@@ -53,7 +53,7 @@ module.exports = async function(bot, first) {
 
   const servers = bot.guilds.cache.array().length;
   const arr = [
-    {activity: { type: 'STREAMING', url: 'https://twitch.tv/morningmax27', name: '>help or ping the bot' }, status: 'dnd'}, //morningmax27 speedruns Breath of The Wild and other random stuff, you should check him out
+    {activity: { type: 'STREAMING', url: 'https://twitch.tv/cinnnamon_', name: '>help or ping the bot' }, status: 'dnd'}, // cinnamon speedruns Breath of The Wild and other random stuff, you should check him out
     {activity: { type: 'WATCHING', name: `${servers} servers`}, status: 'online'},
     {activity: { type: 'LISTENING', name: 'nobody'}, status: 'dnd'},
     {activity: { type: 'PLAYING', name: 'Minecraft'}, status: 'idle'}

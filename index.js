@@ -41,6 +41,32 @@ bot.on('ready', async() => {
 // Message
 //==============================================
 bot.on('message', async message => {
+
+
+  //--------------------------------------------> LLC level up checking
+
+  if(message.guild.id == "634078414332231681") {
+    if(message.channel.id == "644996220632301609") {
+      if(message.author.id == "159985870458322944") {
+        if(message.content.includes("level 15")) {
+          if(message.mentions.users.first()) {
+            const member = message.guild.member(message.mentions.users.first());
+            if(member) {
+              try {
+                member.roles.add(message.guild.roles.cache.get("682037355548246030"));
+                message.channel.send(`<@${member.id}> Congrats on becoming an active member!`);
+              } catch {
+                message.channel.send(`<@${member.id}> I tried to add your active member role, but failed. Please contact a staff member or open a ticket.`);
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //---------------------------------------------> If message is sent by a bot
   if(message.author.bot) {
     return;
   }
@@ -83,6 +109,10 @@ if(message.guild.id == "634078414332231681") {
     }
   }
 }
+
+
+
+
 //--------------------------------------------> Word filter (by sysollie)
 
 /* const filtered = ['jsakdjsdhjisdhoaishdoashdoasidhosh', 'iahwhwodhsoidhoaihowh'];
