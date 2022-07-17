@@ -272,7 +272,7 @@ if(reaction.message.reactions.cache.get("671619411584745472").count == 5 && reac
   const embed1 = new Discord.MessageEmbed()
   .setColor('GREEN')
   .setTimestamp()
-  .setDescription(reaction.message.content)
+  .setDescription(reaction.message.content + '\n\n' + `[Link](https://discord.com/channels/${reaction.message.guild.id}/${reaction.message.channel.id}/${reaction.message.id})`)
   .setTitle(`${user.username} in ${reaction.message.channel.name}`);
   jajaja_channel.send(embed1);
 }
