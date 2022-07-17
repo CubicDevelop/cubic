@@ -263,8 +263,12 @@ bot.on('messageReactionAdd', async (reaction, user) => {
   .setThumbnail(thumbnail)
   .setDescription(`Reaction of ${reaction.emoji} from ${user} in ${reaction.message.channel}\n\nUser ID: ${user.id}\nMessage ID: ${reaction.message.id}\nChannel ID: ${reaction.message.channel.id}\nEmoji ID: ${reaction.emoji.id}`);
 
-if(reaction.message.reactions.cache.filter(a => a.emoji.id == "671619411584745472").size >= 5) {
-  if(!jajaja_channel) return;
+if(reaction.message.reactions.cache.filter(a => a.emoji.id == "671619411584745472").size == 4) {
+  console.log("e");
+  if(!jajaja_channel) {
+    console.log("a");
+    return;
+  }
   const embed1 = new Discord.MessageEmbed()
   .setColor('GREEN')
   .setTimestamp()
