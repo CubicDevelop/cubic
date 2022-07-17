@@ -274,8 +274,7 @@ if(jajaja && jajaja.count == 5 && reaction.emoji.id == "671619411584745472") {
   .setColor('GREEN')
   .setTimestamp()
   .setAuthor(user.username, user.avatarURL())
-  .setDescription(reaction.message.content + '\n\n' + `[Link](https://discord.com/channels/${reaction.message.guild.id}/${reaction.message.channel.id}/${reaction.message.id})`)
-  .setTitle(`${user.username}`);
+  .setDescription(reaction.message.content + '\n' + `[Link](https://discord.com/channels/${reaction.message.guild.id}/${reaction.message.channel.id}/${reaction.message.id})`);
   jajaja_channel.send(embed1);
 }
 
