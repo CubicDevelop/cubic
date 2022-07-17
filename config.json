@@ -3,5 +3,5 @@
   "disabled": false,
   "version": "1.1.0",
   "message": "This bot was created by LordOfTheCube#0419 using tutorials by Anson the Developer, CodeLyon, TheSourceCode and other people. It is currently being hosted on Heroku and the default command prefix is `>` :)\n I also stole a lot of ideas from Ollie#3847 and OBS#9231 and their bot Sound's Utilities (found here: discord.gg/sound )",
-  "announcement": null
+  "announcement": "hi"
 }
