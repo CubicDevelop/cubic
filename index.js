@@ -263,8 +263,9 @@ bot.on('messageReactionAdd', async (reaction, user) => {
   .setThumbnail(thumbnail)
   .setDescription(`Reaction of ${reaction.emoji} from ${user} in ${reaction.message.channel}\n\nUser ID: ${user.id}\nMessage ID: ${reaction.message.id}\nChannel ID: ${reaction.message.channel.id}\nEmoji ID: ${reaction.emoji.id}`);
 
-if(reaction.message.reactions.cache.get("671619411584745472").count == 5 && reaction.emoji.id == "671619411584745472") {
-  console.log("e");
+  let jajaja = reaction.message.reactions.cache.get("671619411584745472");
+
+if(jajaja && jajaja.count == 5 && reaction.emoji.id == "671619411584745472") {
   if(!jajaja_channel) {
     console.log("a");
     return;
