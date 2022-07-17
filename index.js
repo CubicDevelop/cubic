@@ -246,7 +246,8 @@ if(command) {
 bot.on('messageReactionAdd', async (reaction, user) => {
   if(!reaction.message.guild.id == "634078414332231681") return;
   const channel = reaction.message.guild.channels.cache.get("820147312055287828");
-  if(!channel) return;
+  const jajaja_channel = reaction.message.guild.channels.cache.get("998044252267348059");
+
   let thumbnail;
   let type;
   if(reaction.emoji.url) {
@@ -261,6 +262,18 @@ bot.on('messageReactionAdd', async (reaction, user) => {
   .setFooter(`Type: ${type}`)
   .setThumbnail(thumbnail)
   .setDescription(`Reaction of ${reaction.emoji} from ${user} in ${reaction.message.channel}\n\nUser ID: ${user.id}\nMessage ID: ${reaction.message.id}\nChannel ID: ${reaction.message.channel.id}\nEmoji ID: ${reaction.emoji.id}`);
+
+if(reaction.message.reactions.cache.filter(a => a.emoji.id == "671619411584745472").size >= 5) {
+  if(!jajaja_channel) return;
+  const embed1 = new Discord.MessageEmbed()
+  .setColor('GREEN')
+  .setTimestamp()
+  .setDescription(reaction.message.content)
+  .setTitle(`${user} in ${reaction.channel}`);
+  jajaja_channel.send(embed1);
+}
+
+  if(!channel) return;
   channel.send(embed);
 })
 
