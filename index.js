@@ -263,7 +263,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
   .setThumbnail(thumbnail)
   .setDescription(`Reaction of ${reaction.emoji} from ${user} in ${reaction.message.channel}\n\nUser ID: ${user.id}\nMessage ID: ${reaction.message.id}\nChannel ID: ${reaction.message.channel.id}\nEmoji ID: ${reaction.emoji.id}`);
 
-if(reaction.message.reactions.cache.get("671619411584745472").count == 5) {
+if(reaction.message.reactions.cache.get("671619411584745472").count == 5 && reaction.emoji.id == "671619411584745472") {
   console.log("e");
   if(!jajaja_channel) {
     console.log("a");
@@ -273,7 +273,7 @@ if(reaction.message.reactions.cache.get("671619411584745472").count == 5) {
   .setColor('GREEN')
   .setTimestamp()
   .setDescription(reaction.message.content)
-  .setTitle(`${user} in ${reaction.channel}`);
+  .setTitle(`${user.name} in ${reaction.message.channel.name}`);
   jajaja_channel.send(embed1);
 }
 
