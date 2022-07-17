@@ -273,7 +273,7 @@ if(reaction.message.reactions.cache.get("671619411584745472").count == 5 && reac
   .setColor('GREEN')
   .setTimestamp()
   .setDescription(reaction.message.content)
-  .setTitle(`${user.name} in ${reaction.message.channel.name}`);
+  .setTitle(`${user.username} in ${reaction.message.channel.name}`);
   jajaja_channel.send(embed1);
 }
 
