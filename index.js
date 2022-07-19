@@ -270,11 +270,19 @@ if(jajaja && jajaja.count == 5 && reaction.emoji.id == "671619411584745472") {
     console.log("a");
     return;
   }
-  const embed1 = new Discord.MessageEmbed()
+  let embed1 = new Discord.MessageEmbed()
   .setColor('GREEN')
   .setTimestamp()
-  .setAuthor(user.username, user.avatarURL())
+  .setAuthor(reaction.message.author.username, reaction.message.author.avatarURL())
   .setDescription(reaction.message.content + '\n\n' + `[Link](https://discord.com/channels/${reaction.message.guild.id}/${reaction.message.channel.id}/${reaction.message.id})`);
+
+  if(reaction.message.attachments.size > 0) {
+    try {
+      embed1.setImage(reaction.message.attachments.first().url)
+    } catch(e) {
+      console.log(e);
+    }
+  }
   jajaja_channel.send(embed1);
 }
 
